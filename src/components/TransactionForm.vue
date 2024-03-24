@@ -45,5 +45,14 @@ const id = Math.random().toString(36).substr(2, 9);
         class="px-4 py-2 border-2 rounded-md"
       ></textarea>
     </div>
+    <div class="flex flex-col space-y-3">
+      <label for="spentAt">Spent At <span class="text-red-500">(*)</span> </label>
+      <input
+        v-model="modelValue.spentAt"
+        id="spentAt"
+        class="px-4 py-2 border-2 rounded-md"
+        type="date"
+      >
+    </div>
   </div>
 </template>

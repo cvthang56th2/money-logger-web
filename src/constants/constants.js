@@ -1,7 +1,8 @@
+import { toDateInputValue } from "../utils/utils";
+
 export const defaultFormData = {
-  total: 0,
   inputType: "out",
   moneyType: "cash",
   description: "",
-  spentAt: new Date(),
+  spentAt: toDateInputValue(new Date()),
 };

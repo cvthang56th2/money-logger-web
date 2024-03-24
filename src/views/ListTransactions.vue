@@ -27,7 +27,10 @@ const deleteTransaction = (id) => {
 };
 
 TransactionServices.getTransactionsSnapshot((data) => {
-  transactions.value = data;
+  transactions.value = data.map(e => ({
+    ...e,
+    spentAt: e.spentAt || e.createdAt,
+  }));
 });
 </script>
 <template>
@@ -58,7 +61,7 @@ TransactionServices.getTransactionsSnapshot((data) => {
             <div class="w-[50px] flex-[0_0_50px] border-b-2 border-blue-500 p-1 text-center">{{ transaction.moneyType }}</div>
             <div class="w-[70px] flex-[0_0_70px] border-b-2 border-blue-500 p-1">{{ $numberWithCommas(transaction.total || 0) }}</div>
             <div class="w-[100px] flex-[0_0_100px] border-b-2 border-blue-500 p-1">{{ transaction.description }}</div>
-            <div class="w-[70px] flex-[0_0_70px] border-b-2 border-blue-500 p-1">{{ formatDate(transaction.createdAt) }}</div>
+            <div class="w-[70px] flex-[0_0_70px] border-b-2 border-blue-500 p-1">{{ formatDate(transaction.spentAt) }}</div>
             <div class="w-[120px] flex-[0_0_120px] border-b-2 border-blue-500 p-1 flex items-center justify-center">
               <button class="bg-green-500 text-white px-1 m-1" @click="editTransaction(transaction)">Edit</button>
               <button class="bg-red-500 text-white px-1 m-1" @click="deleteTransaction(transaction.id)">Delete</button>

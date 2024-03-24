@@ -31,7 +31,7 @@ export const snapshotToArray = (snapshot) => {
 };
 
 
-export const formatDate = (date, format = 'hh:mm DD/MM/YYYY') => {
+export const formatDate = (date, format = 'DD/MM/YYYY') => {
   if (!date) {
     return
   }
@@ -64,4 +64,10 @@ export const toLowerCaseNonAccentVietnamese = (str) => {
   str = str.replace(/\u0300|\u0301|\u0303|\u0309|\u0323/g, ""); // Huyền sắc hỏi ngã nặng 
   str = str.replace(/\u02C6|\u0306|\u031B/g, ""); // Â, Ê, Ă, Ơ, Ư
   return str;
+}
+
+export const toDateInputValue = (date) => {
+  const local = new Date(date);
+  local.setMinutes(date.getMinutes() - date.getTimezoneOffset());
+  return local.toJSON().slice(0, 10);
 }
