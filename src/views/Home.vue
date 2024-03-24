@@ -18,7 +18,7 @@ const submit = async () => {
     });
     return;
   }
-  TransactionServices.createTransaction(formData)
+  TransactionServices.createTransaction(formData.value)
     .then(() => {
       swal.fire({
         icon: "success",

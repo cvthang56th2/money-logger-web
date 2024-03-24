@@ -15,11 +15,14 @@ const editTransaction = (transaction) => {
 };
 
 const deleteTransaction = (id) => {
-  TransactionServices.deleteTransaction(id);
   swal.fire({
-    icon: "success",
-    title: "Success",
-    text: "Transaction deleted successfully",
+    title: "Are you sure? Once deleted this transaction, you will not be able to recover it!",
+    showDenyButton: true,
+  }).then((result) => {
+    if (result.isConfirmed) {
+      TransactionServices.deleteTransaction(id);
+      swal.fire("Saved!", "", "success");
+    }
   });
 };
 
