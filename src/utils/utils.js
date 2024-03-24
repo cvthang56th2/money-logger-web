@@ -31,7 +31,7 @@ export const snapshotToArray = (snapshot) => {
 };
 
 
-export const formatDate = (date, format = 'DD/MM/YYYY hh:mm') => {
+export const formatDate = (date, format = 'hh:mm DD/MM/YYYY') => {
   if (!date) {
     return
   }

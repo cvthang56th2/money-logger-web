@@ -8,7 +8,6 @@ import VueSweetAlert from 'vue-sweetalert2'
 import 'sweetalert2/dist/sweetalert2.min.css'
 
 import { formatDate, numberWithCommas } from './utils/utils'
-import  VueHtmlToPaper from './plugins/VueHtmlToPaper'
 import "vue-select/dist/vue-select.css";
 
 const app = createApp(App)
@@ -18,7 +17,6 @@ const pinia = createPinia()
 
 app
   .use(pinia)
-  .use(VueHtmlToPaper)
   .use(VueSweetAlert)
   .use(router)
   .mount('#app')
