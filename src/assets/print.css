@@ -1,0 +1,96 @@
+
+.text-center {
+  text-align: center;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.text-2xl {
+  font-size: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.text-xl {
+  font-size: 1.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.w-1-2 {
+  width: 50%;
+}
+.w-2-12 {
+  width: 16.666667%;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.w-4-12 {
+  width: 33.33%;
+}
+.w-5-12 {
+  width: 41.666667%;
+}
+.w-1-12 {
+  width: 8.333333%;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.border-1px {
+  border-width: 1px;
+}
+.border-b-2px {
+  border-bottom: 2px solid black;
+}
+
+.border-black {
+  border-color: #000;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.w-5-6 {
+  width: 83.33%;
+}
+
+.h-2px {
+  height: 2px;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
+}
+
+.justify-center {
+  justify-content: center;
+}
