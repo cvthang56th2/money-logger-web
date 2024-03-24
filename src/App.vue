@@ -4,9 +4,11 @@
 <template>
   <div class="h-[100svh] flex flex-col">
     <header class="border-b-2 flex-0 relative px-4">
-      <div class="flex lg:justify-center text-xl md:text-2xl lg:text-3xl py-2 font-bold">
-        Money Logger
-      </div>
+      <router-link to="/">
+        <div class="flex lg:justify-center text-xl md:text-2xl lg:text-3xl py-2 font-bold">
+          Money Logger
+        </div>
+      </router-link>
     </header>
     <main class="flex-1 overflow-y-auto">
       <router-view></router-view>
