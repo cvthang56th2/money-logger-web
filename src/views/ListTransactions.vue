@@ -49,7 +49,7 @@ TransactionServices.getTransactionsSnapshot((data) => {
             <div class="w-[50px] flex-[0_0_50px] border-b-2 border-blue-500 p-1 text-center font-bold">Money Type</div>
             <div class="w-[70px] flex-[0_0_70px] border-b-2 border-blue-500 p-1 font-bold">Total</div>
             <div class="w-[100px] flex-[0_0_100px] border-b-2 border-blue-500 p-1 font-bold">Description</div>
-            <div class="w-[70px] flex-[0_0_70px] border-b-2 border-blue-500 p-1 font-bold">Created At</div>
+            <div class="w-[70px] flex-[0_0_70px] border-b-2 border-blue-500 p-1 font-bold">Spent At</div>
             <div class="w-[120px] flex-[0_0_120px] border-b-2 border-blue-500 p-1 text-center font-bold">Actions</div>
           </div>
           <div
