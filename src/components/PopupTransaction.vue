@@ -10,42 +10,7 @@
     confirmText="Lưu"
   >
     <div class="p-4">
-      <div class="space-y-4">
-        <div class="flex space-x-3 justify-between items-center">
-          <div class="flex flex-col space-y-3">
-            <select class="p-2 border-2 rounded-md" v-model="formData.inputType" id="inputType">
-              <option value="in">In</option>
-              <option value="out">Out</option>
-            </select>
-          </div>
-          <div class="flex flex-col space-y-3">
-            <select class="p-2 border-2 rounded-md" v-model="formData.moneyType" id="moneyType">
-              <option value="cash">Cash</option>
-              <option value="momo">MOMO</option>
-              <option value="bank">Bank</option>
-            </select>
-          </div>
-        </div>
-        <div class="flex flex-col space-y-3">
-          <label for="total">Total <span class="text-red-500">(*)</span></label>
-          <input
-            v-model="formData.total"
-            id="total"
-            type="number"
-            class="px-4 py-2 border-2 rounded-md"
-          />
-        </div>
-        <div class="flex flex-col space-y-3">
-          <label for="description"
-            >Description <span class="text-red-500">(*)</span>
-          </label>
-          <textarea
-            v-model="formData.description"
-            id="description"
-            class="px-4 py-2 border-2 rounded-md"
-          ></textarea>
-        </div>
-      </div>
+      <TransactionForm v-model="formData" />
     </div>
   </Popup>
 </template>
@@ -53,6 +18,7 @@
 <script>
 import Popup from "./Popup.vue";
 import TransactionServices from '../firebase/transaction/transaction.services'
+import TransactionForm from "./TransactionForm.vue";
 
 export default {
   props: {
@@ -67,6 +33,7 @@ export default {
   },
   components: {
     Popup,
+    TransactionForm,
   },
   watch: {
     modelValue(v) {
